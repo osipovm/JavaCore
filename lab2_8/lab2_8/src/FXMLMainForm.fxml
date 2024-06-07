@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLMainFormController">
+   <children>
+      <Label fx:id="lblPoints" layoutX="78.0" layoutY="40.0" prefHeight="18.0" prefWidth="78.0" text="Points" />
+      <TableView fx:id="tableTabulated" layoutX="39.0" layoutY="58.0" prefHeight="242.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="columnX" prefWidth="269.79997634887695" text="X value" />
+          <TableColumn fx:id="columnY" minWidth="0.0" prefWidth="263.1999877929687" text="Y value" />
+        </columns>
+      </TableView>
+      <Label layoutX="64.0" layoutY="312.0" prefHeight="26.0" prefWidth="87.0" text="New point X:" />
+      <Label layoutX="64.0" layoutY="347.0" prefHeight="26.0" prefWidth="87.0" text="New point Y:" />
+      <TextField fx:id="edX" layoutX="151.0" layoutY="312.0" />
+      <TextField fx:id="edY" layoutX="151.0" layoutY="347.0" />
+      <Button id="btnAdd" layoutX="327.0" layoutY="313.0" mnemonicParsing="false" onAction="#btNewClick" prefHeight="26.0" prefWidth="100.0" text="Add point" />
+      <Button id="btnDel" layoutX="327.0" layoutY="347.0" mnemonicParsing="false" onAction="#btnDel" prefHeight="26.0" prefWidth="100.0" text="Delete" />
+      <MenuBar layoutY="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Open" />
+            </items>
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Create" onAction="#create" />
+              </items>
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Save" />
+              </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tabulate">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Tabulate" />
+            </items>
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Load" />
+              </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
